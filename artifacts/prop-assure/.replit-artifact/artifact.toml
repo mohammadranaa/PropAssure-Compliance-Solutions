@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "PropAssure"
+version = "1.0.0"
+id = "artifacts/prop-assure"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25737
+
+[services.development]
+run = "pnpm --filter @workspace/prop-assure run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/prop-assure", "run", "build" ]
+publicDir = "artifacts/prop-assure/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25737"
+BASE_PATH = "/"

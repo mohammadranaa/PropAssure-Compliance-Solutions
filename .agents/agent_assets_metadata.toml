@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "elSalJCcO77PII8Ckh5VX"
+uri = "file://artifacts/prop-assure/public/hero-building.png"
+type = "image"
+title = "modern UK commercial property facade"
