@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logoSrc from "@assets/PropAssure_transparent_1776686496923.png";
+import logoSrc from "@assets/PropAssure_20260417_190455_0000_(1)_1776687061489.png";
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-6">
-              <img src={logoSrc} alt="PropAssure" className="h-16 w-auto" />
+              <img src={logoSrc} alt="PropAssure" className="h-16 w-auto" style={{ mixBlendMode: "multiply" }} />
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
               Making Property Compliance Feel Simple. The trusted compliance partner for UK property professionals.
