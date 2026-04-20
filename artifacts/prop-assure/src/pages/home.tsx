@@ -10,12 +10,12 @@ const stats = [
 ];
 
 const services = [
-  { icon: Zap, title: "EPC Certificates", desc: "Energy Performance Certificates for residential and commercial properties." },
-  { icon: Flame, title: "Gas Safety (CP12)", desc: "Annual gas safety inspections by Gas Safe registered engineers." },
-  { icon: Zap, title: "Electrical Safety (EICR)", desc: "Electrical Installation Condition Reports ensuring full wiring compliance." },
-  { icon: Droplet, title: "Legionella Risk", desc: "Water system assessments to identify and mitigate Legionnaires' risk." },
-  { icon: Shield, title: "Fire Risk Assessments", desc: "Thorough evaluations of fire hazards and escape routes." },
-  { icon: CheckCircle2, title: "PAT Testing", desc: "Portable Appliance Testing for landlord-supplied electrical equipment." },
+  { icon: Zap, title: "Electrical Compliance", desc: "EICR, PAT Testing, Electrical Diagnostics, and Fuse Box Installation." },
+  { icon: Flame, title: "Gas Safety", desc: "Gas Safety Certificates issued by fully registered engineers." },
+  { icon: Shield, title: "Fire & Safety", desc: "Fire Risk Assessments, Alarm Testing, Emergency Lighting, and Extinguisher Testing." },
+  { icon: Droplet, title: "Environmental", desc: "Asbestos Surveys conducted by qualified surveyors." },
+  { icon: FileText, title: "Energy Performance", desc: "EPC certificates for residential and commercial properties." },
+  { icon: CheckCircle2, title: "Portfolio Management", desc: "Full compliance calendar management across entire property portfolios." },
 ];
 
 const testimonials = [
@@ -26,13 +26,13 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: "As a private landlord with multiple properties, I used to dread renewal time. PropAssure handle everything — I just receive the certificates.",
+    quote: "As a block management company, we needed a single partner who could handle all compliance disciplines. PropAssure deliver consistently across every service.",
     author: "James Harrington",
-    role: "Private Landlord, Manchester",
+    role: "Director, Harrington Block Management",
     rating: 5,
   },
   {
-    quote: "Their block management compliance service is second to none. Thorough reports, plain-English summaries, and proactive renewal reminders.",
+    quote: "Their portfolio compliance service is second to none. Thorough reports, plain-English summaries, and proactive renewal reminders.",
     author: "Deborah Osei",
     role: "Director, Osei Block Management Ltd",
     rating: 5,
@@ -58,13 +58,13 @@ export default function Home() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center rounded-full border px-3 py-1 text-sm font-medium bg-white text-secondary mb-6 border-secondary/20">
               <Shield className="w-4 h-4 mr-2" />
-              UK's Trusted Property Compliance Partner
+              UK Property Compliance Partner
             </div>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight">
               Making Property Compliance <span className="text-primary">Feel Simple</span>.
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Authoritative, clear, and reassuring compliance solutions for estate agents, property managers, and businesses across the UK.
+              We support property professionals by managing compliance across entire portfolios — ensuring every property remains safe, certified, and fully aligned with UK regulations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild className="rounded-none h-14 px-8 text-base">
@@ -81,10 +81,10 @@ export default function Home() {
             <div className="aspect-[4/3] bg-muted relative border border-border p-2 bg-white shadow-xl rotate-1 transition-transform hover:rotate-0 duration-500">
               <img
                 src="/hero-building.png"
-                alt="Modern UK Commercial Property"
+                alt="Property compliance professionals at work"
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop";
+                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop";
                 }}
               />
             </div>
@@ -118,28 +118,28 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Why PropAssure?</h2>
           <p className="text-lg text-muted-foreground mb-16">
-            Working with PropAssure feels like having a seasoned expert on your side. Everything is organised, plain-English, and never overwhelming.
+            A structured, reliable approach to managing compliance across property portfolios.
           </p>
           <div className="grid md:grid-cols-3 gap-8 text-left">
             <div className="p-6 border bg-slate-50">
               <Shield className="w-10 h-10 text-secondary mb-4" />
-              <h3 className="font-semibold text-xl mb-3">Authoritative</h3>
+              <h3 className="font-semibold text-xl mb-3">Industry-Led Expertise</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Backed by years of industry experience and all required UK certifications. Our engineers and assessors are fully registered with Gas Safe, NICEIC, and RICS.
+                Our team works across electrical, gas, fire, and environmental compliance — delivering consistent, regulation-aligned services through qualified and accredited engineers.
               </p>
             </div>
             <div className="p-6 border bg-slate-50">
               <FileText className="w-10 h-10 text-secondary mb-4" />
-              <h3 className="font-semibold text-xl mb-3">Clear</h3>
+              <h3 className="font-semibold text-xl mb-3">Clarity at Every Step</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                No jargon. Our reports and communications are straightforward — letting you know exactly where you stand, what is required by law, and what steps to take.
+                We remove ambiguity. Every report is structured, actionable, and easy to understand — so you know exactly what's compliant and what needs attention.
               </p>
             </div>
             <div className="p-6 border bg-slate-50">
               <Clock className="w-10 h-10 text-secondary mb-4" />
-              <h3 className="font-semibold text-xl mb-3">Reassuring</h3>
+              <h3 className="font-semibold text-xl mb-3">Operational Reliability</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Fast turnarounds, proactive renewal reminders, and dedicated account management so you never miss a deadline or face an unexpected fine.
+                From scheduling to reporting, we ensure compliance is delivered on time, every time — with proactive reminders and a system you can rely on.
               </p>
             </div>
           </div>
@@ -184,14 +184,15 @@ export default function Home() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Built for Property Professionals</h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Whether you manage a single rental or an estate agency network, PropAssure scales to your needs. We work with professionals who cannot afford compliance lapses.
+                PropAssure is designed for organisations managing property at scale — where compliance is ongoing, complex, and critical to operations.
               </p>
               <ul className="space-y-4">
                 {[
                   { icon: Building2, label: "Estate &amp; Letting Agents" },
-                  { icon: Users, label: "Property Management Companies" },
-                  { icon: Shield, label: "Private Landlords &amp; Investors" },
-                  { icon: Award, label: "Housing Associations &amp; HMO Operators" },
+                  { icon: Users, label: "Property &amp; Block Management Companies" },
+                  { icon: Award, label: "Facilities Management Companies" },
+                  { icon: Shield, label: "Commercial Property Operators" },
+                  { icon: Building2, label: "Housing Associations &amp; Portfolio Landlords" },
                 ].map((item) => {
                   const Icon = item.icon;
                   return (
@@ -204,6 +205,9 @@ export default function Home() {
                   );
                 })}
               </ul>
+              <p className="mt-6 text-sm text-muted-foreground italic">
+                We also support large facilities management providers with outsourced compliance delivery across their portfolios.
+              </p>
               <div className="mt-8">
                 <Button asChild className="rounded-none">
                   <Link href="/industries">See All Industries <ArrowRight className="ml-2 w-4 h-4" /></Link>
@@ -219,9 +223,9 @@ export default function Home() {
               </div>
               <div className="p-6 border-l-4 border-secondary bg-slate-50">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  "I used to dread renewal time as a private landlord. PropAssure handle everything — I just receive the certificates."
+                  "We needed a single partner for all compliance disciplines across our managed blocks. PropAssure deliver consistently across every service."
                 </p>
-                <p className="mt-3 text-sm font-semibold">James Harrington — Private Landlord, Manchester</p>
+                <p className="mt-3 text-sm font-semibold">James Harrington — Director, Harrington Block Management</p>
               </div>
             </div>
           </div>
@@ -251,7 +255,7 @@ export default function Home() {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
             <p className="text-lg text-muted-foreground">
-              Trusted by estate agents, property managers, and landlords across the UK.
+              Trusted by estate agents, property managers, and facilities management companies across the UK.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">

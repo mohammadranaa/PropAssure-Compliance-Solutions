@@ -1,69 +1,31 @@
-import { Shield, Award, Users2, CheckCircle2, Building2, Target, Heart } from "lucide-react";
+import { Shield, Award, Users2, CheckCircle2, Building2, Target, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-
-const values = [
-  {
-    icon: Shield,
-    title: "Uncompromising Integrity",
-    desc: "Safety is not negotiable. Our assessments are thorough, objective, and fully aligned with current UK legislation. We never cut corners — and we will tell you clearly when a property doesn't meet the required standard.",
-  },
-  {
-    icon: Users2,
-    title: "Clear Communication",
-    desc: "We replace industry jargon with plain English. Every report we issue tells you exactly what the result means, what action is required, and what the consequence of non-action would be. No ambiguity.",
-  },
-  {
-    icon: Award,
-    title: "Professional Reliability",
-    desc: "We turn up when we say we will, deliver reports promptly, and manage renewals proactively. Our reputation is built on being the most dependable compliance partner in the market — and we intend to keep it.",
-  },
-  {
-    icon: Target,
-    title: "Client-First Approach",
-    desc: "Our processes are designed around your workflow, not ours. From direct tenant coordination to live compliance dashboards, every feature we've developed exists to reduce the burden on property professionals.",
-  },
-  {
-    icon: Heart,
-    title: "Genuine Care for Safety",
-    desc: "Behind every certificate is a real home or workplace. We take seriously our role in protecting the people who live and work in the properties we inspect — and that motivates us to do our best work every day.",
-  },
-  {
-    icon: Building2,
-    title: "UK Expertise",
-    desc: "We are a UK-only operation. Our entire team is trained in UK law, registered with UK regulatory bodies, and focused entirely on the needs of the UK property sector. We don't operate internationally — we don't need to.",
-  },
-];
 
 const accreditations = [
   { name: "Gas Safe Registered", number: "Reg. No. 567891", desc: "All gas inspections conducted by Gas Safe registered engineers" },
   { name: "NICEIC Approved", number: "Cert. No. NICEIC-89012", desc: "Electrical work carried out by NICEIC-approved contractors" },
   { name: "RICS Accredited", number: "Firm No. 0098765", desc: "Energy assessors working to RICS professional standards" },
-  { name: "Trustmark Registered", number: "ID: 98765432", desc: "Government-endorsed quality scheme for home improvement" },
+  { name: "Trustmark Registered", number: "ID: 98765432", desc: "Government-endorsed quality scheme for property services" },
   { name: "IOSH Qualified", number: "Member No. 4512678", desc: "Health and safety management to IOSH standards" },
   { name: "CIBSE Certified", number: "Cert. No. CEN-00432", desc: "Energy assessment aligned with CIBSE guidance" },
 ];
 
-const team = [
+const deliveryPrinciples = [
   {
-    name: "Michael Lawson",
-    role: "Managing Director",
-    bio: "Over 20 years in the UK property compliance sector. Previously Head of Compliance at a FTSE 250 property company.",
+    icon: Layers,
+    title: "Structured Processes",
+    desc: "Our scheduling, inspection, and reporting workflows are standardised across all service disciplines. This consistency means clients receive the same standard of delivery regardless of location, property type, or service required.",
   },
   {
-    name: "Rachel Osei",
-    role: "Head of Operations",
-    bio: "Oversees scheduling, client management, and quality assurance across all service lines. CIBSE and IOSH qualified.",
+    icon: Users2,
+    title: "Qualified Engineers",
+    desc: "Every engineer and assessor we deploy is fully accredited with the relevant UK regulatory body. We do not use unregistered subcontractors. Accreditation is verified and maintained as a condition of continued engagement.",
   },
   {
-    name: "Tom Ashworth",
-    role: "Chief Assessor",
-    bio: "Gas Safe registered engineer with 15 years of field experience. Leads our technical team of 35 engineers and assessors.",
-  },
-  {
-    name: "Emily Griffiths",
-    role: "Client Partnerships Director",
-    bio: "Responsible for estate agency and portfolio client relationships. Former property manager with 12 years of industry experience.",
+    icon: Award,
+    title: "Consistent Delivery",
+    desc: "We operate to defined turnaround times and reporting standards. Certificates and reports are issued within agreed timeframes, and any deviation is communicated proactively rather than reactively.",
   },
 ];
 
@@ -76,40 +38,34 @@ export default function About() {
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">About PropAssure</h1>
           <p className="text-xl text-muted-foreground">
-            Setting the standard for reliability and clarity in UK property compliance since 2014.
+            A compliance partner built around the needs of property professionals.
           </p>
         </div>
       </section>
 
-      {/* Story */}
+      {/* Section 1: Who We Are */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Our Story</p>
-              <h2 className="text-3xl font-bold mb-6">Built to solve a real problem</h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Who We Are</p>
+              <h2 className="text-3xl font-bold mb-6">A compliance partner focused on supporting property professionals</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed text-sm">
                 <p>
-                  PropAssure was founded in 2014 on a simple but important observation: property professionals were spending enormous amounts of time chasing compliance certificates, dealing with unreliable contractors, and trying to decipher an increasingly complex web of UK regulations.
+                  PropAssure is a UK property compliance company working with estate agents, property managers, facilities management providers, housing associations, and commercial property operators.
                 </p>
                 <p>
-                  Our founder, Michael Lawson, spent 15 years working as Head of Compliance for a large residential property group before founding PropAssure. He had seen first-hand how compliance failures — however administrative — could result in substantial fines, insurance disputes, and in the worst cases, genuine safety incidents.
+                  We provide electrical, gas, fire, and environmental compliance services — managed through a single, coordinated approach that reduces the administrative burden on property professionals and ensures consistent delivery across portfolios of all sizes.
                 </p>
                 <p>
-                  He built PropAssure to be the antidote to that frustration: a single, reliable, plainly-speaking compliance partner that property professionals could genuinely trust.
-                </p>
-                <p>
-                  Ten years on, we serve over 500 clients across the UK — from independent landlords to national agency networks. Our team of 40+ accredited engineers and assessors conducts more than 10,000 inspections per year. Our client retention rate is 98%.
-                </p>
-                <p className="font-medium text-foreground">
-                  We don't just issue certificates. We provide peace of mind.
+                  We are not generalists. Compliance is what we do, and our entire operation — our engineers, our processes, our reporting — is built around delivering it to a consistent standard.
                 </p>
               </div>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: "2014", label: "Founded" },
+                  { value: "2014", label: "Established" },
                   { value: "40+", label: "Accredited engineers" },
                   { value: "500+", label: "Clients served" },
                   { value: "10,000+", label: "Annual inspections" },
@@ -121,9 +77,9 @@ export default function About() {
                 ))}
               </div>
               <div className="bg-primary text-primary-foreground p-6">
-                <p className="font-semibold mb-2">Our Coverage</p>
+                <p className="font-semibold mb-2">UK Coverage</p>
                 <p className="text-sm text-primary-foreground/90 leading-relaxed">
-                  We operate nationwide across England, Scotland, and Wales. Our engineers are field-based and allocated regionally, ensuring local knowledge and fast scheduling throughout the UK.
+                  We operate nationwide across England, Scotland, and Wales. Our engineers are regionally allocated, ensuring efficient scheduling and consistent response times throughout the UK.
                 </p>
               </div>
             </div>
@@ -131,21 +87,73 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Section 2: What We Do */}
       <section className="py-24 bg-slate-50 border-y">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">What We Do</p>
+              <h2 className="text-3xl font-bold mb-6">Compliance management across property portfolios</h2>
+              <p className="text-muted-foreground leading-relaxed text-sm mb-8">
+                We manage electrical, gas, fire, and environmental compliance across property portfolios — providing the certificates, reports, and documentation that property professionals need to remain legally compliant and operationally sound.
+              </p>
+              <div className="space-y-4">
+                {[
+                  { icon: Shield, label: "Electrical", detail: "EICR, PAT Testing, Electrical Diagnostics, Fuse Box Installation" },
+                  { icon: Building2, label: "Gas", detail: "Gas Safety Certificates (CP12)" },
+                  { icon: Target, label: "Fire & Safety", detail: "Fire Risk Assessments, Alarm Testing, Emergency Lighting, Extinguisher Testing" },
+                  { icon: Layers, label: "Environmental", detail: "Asbestos Surveys" },
+                  { icon: Award, label: "Energy", detail: "Energy Performance Certificates (EPC)" },
+                ].map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={item.label} className="flex items-start gap-3 p-4 bg-white border">
+                      <div className="w-8 h-8 bg-primary/5 flex items-center justify-center shrink-0">
+                        <Icon className="w-4 h-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-sm">{item.label}</p>
+                        <p className="text-xs text-muted-foreground">{item.detail}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="bg-white border p-8">
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-4">Service Coverage</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Our services cover the full range of compliance requirements applicable to residential lettings, commercial premises, HMOs, blocks of flats, and mixed-use developments — across both the private and social housing sectors.
+                </p>
+              </div>
+              <div className="bg-white border p-8">
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-4">Reporting</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  All certificates and reports are issued digitally, stored in a client portal, and formatted for direct use — whether submitting to tenants, local authorities, or managing agents. Reports are structured, plain-English, and include defined next steps where remediation is required.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: How We Work */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-4">Our Core Principles</h2>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">How We Work</p>
+            <h2 className="text-3xl font-bold mb-4">Structured. Qualified. Consistent.</h2>
             <p className="text-muted-foreground">
-              These aren't mission-statement platitudes. They're the standards we hold ourselves to every day — in the field, in our reports, and in our client relationships.
+              Our operational model is built to deliver compliance reliably, at scale, without variation in quality.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {values.map((v) => {
+          <div className="grid md:grid-cols-3 gap-8">
+            {deliveryPrinciples.map((v) => {
               const Icon = v.icon;
               return (
-                <div key={v.title} className="bg-white border p-8">
-                  <div className="w-12 h-12 bg-primary/5 border flex items-center justify-center mb-5">
+                <div key={v.title} className="bg-slate-50 border p-8">
+                  <div className="w-12 h-12 bg-white border flex items-center justify-center mb-5">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{v.title}</h3>
@@ -157,44 +165,59 @@ export default function About() {
         </div>
       </section>
 
-      {/* Leadership Team */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Leadership Team</h2>
-            <p className="text-muted-foreground">
-              PropAssure is led by experienced property compliance professionals with decades of combined industry expertise.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-8">
-            {team.map((member) => (
-              <div key={member.name} className="flex gap-5 p-6 border bg-slate-50">
-                <div className="w-14 h-14 bg-primary/10 border flex items-center justify-center shrink-0 text-xl font-bold text-primary">
-                  {member.name.split(" ").map((n) => n[0]).join("")}
-                </div>
-                <div>
-                  <p className="font-semibold">{member.name}</p>
-                  <p className="text-sm text-primary mb-2">{member.role}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{member.bio}</p>
-                </div>
+      {/* Section 4: Our Approach */}
+      <section className="py-24 bg-slate-50 border-y">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Our Approach</p>
+              <h2 className="text-3xl font-bold mb-6">Compliance should be predictable, not reactive</h2>
+              <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
+                <p>
+                  Too many property professionals are still managing compliance reactively — chasing certificates as they expire, dealing with last-minute scheduling, and relying on contractors who don't communicate effectively. The cost of that approach is time, risk, and exposure.
+                </p>
+                <p>
+                  Our model is built on the principle that compliance should be planned, tracked, and delivered proactively. We manage renewal calendars, coordinate access, and issue reminders before deadlines arrive — so our clients are never caught out.
+                </p>
+                <p>
+                  We work best with clients who want to take compliance seriously and treat it as an operational process, not an afterthought. If that describes your organisation, we'd welcome the conversation.
+                </p>
               </div>
-            ))}
+            </div>
+            <div className="space-y-4">
+              {[
+                { title: "Proactive Renewal Management", desc: "We track expiry dates across all services and remind clients in advance — removing the risk of certificates lapsing unnoticed." },
+                { title: "Direct Tenant Coordination", desc: "We handle access arrangements with tenants directly, removing one of the most time-consuming aspects of compliance management from your team." },
+                { title: "Single Point of Contact", desc: "One account manager, one point of contact, for all compliance disciplines. No need to coordinate across multiple contractors or service providers." },
+                { title: "Documented and Auditable", desc: "Every inspection, certificate, and report is stored digitally and accessible on demand — providing a clear, auditable compliance record for any property." },
+              ].map((item) => (
+                <div key={item.title} className="bg-white border p-6">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm mb-1">{item.title}</p>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Accreditations */}
-      <section className="py-24 bg-slate-50 border-t">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Accreditations & Registrations</h2>
             <p className="text-muted-foreground">
-              Every accreditation we hold is a guarantee of the standards your properties deserve.
+              All services are delivered by engineers and assessors holding current accreditations with the relevant UK regulatory bodies.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {accreditations.map((acc) => (
-              <div key={acc.name} className="bg-white border p-6">
+              <div key={acc.name} className="bg-slate-50 border p-6">
                 <div className="flex items-center gap-2 mb-2">
                   <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
                   <h3 className="font-semibold">{acc.name}</h3>
@@ -210,9 +233,9 @@ export default function About() {
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h2 className="text-3xl font-bold mb-4">Work with a team you can trust</h2>
+          <h2 className="text-3xl font-bold mb-4">Work with a partner you can rely on</h2>
           <p className="text-primary-foreground/90 mb-8 text-lg">
-            Get in touch to discuss your compliance requirements. We'll be straightforward about what you need, what it costs, and how we can help.
+            Get in touch to discuss your compliance requirements. We'll give you a clear picture of what's involved and how we can help.
           </p>
           <Button size="lg" asChild className="rounded-none bg-white text-primary hover:bg-white/90 h-14 px-8">
             <Link href="/contact">Start a Conversation</Link>

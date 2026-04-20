@@ -1,0 +1,91 @@
+Update the homepage content and visuals to improve B2B positioning and remove generic marketing language.
+
+1. HERO IMAGE:
+Replace the current building image with a more conceptual, trust-driven visual.
+
+The image should represent:
+- Assurance
+- Reliability
+- Compliance coverage
+- Professional partnership
+
+Avoid generic buildings. Prefer:
+- Professionals reviewing plans
+- Engineers inspecting systems
+- Subtle abstract visuals representing “protection” or “coverage”
+
+---
+
+2. TAGLINE SECTION:
+
+Keep the tagline:
+“Making property compliance feel simple”
+
+REMOVE the current paragraph:
+“Authoritative, clear, and reassuring compliance solutions…”
+
+Replace it with:
+
+“We support property professionals by managing compliance across entire portfolios — ensuring every property remains safe, certified, and fully aligned with UK regulations.”
+
+---
+
+3. “WHY PROPASSURE” SECTION:
+
+Replace the intro sentence:
+“Authoritative, clear, and reassuring compliance solutions…”
+
+WITH:
+
+“A structured, reliable approach to managing compliance across property portfolios.”
+
+---
+
+Update the 3 pillars:
+
+TITLE: Industry-Led Expertise  
+CONTENT:  
+“Our team works across electrical, gas, fire, and environmental compliance — delivering consistent, regulation-aligned services through qualified and accredited engineers.”
+
+---
+
+TITLE: Clarity at Every Step  
+CONTENT:  
+“We remove ambiguity. Every report is structured, actionable, and easy to understand — so you know exactly what’s compliant and what needs attention.”
+
+---
+
+TITLE: Operational Reliability  
+CONTENT:  
+“From scheduling to reporting, we ensure compliance is delivered on time, every time — with proactive reminders and a system you can rely on.”
+
+---
+
+4. “BUILT FOR PROPERTY PROFESSIONALS” SECTION:
+
+Update the intro text to:
+
+“PropAssure is designed for organisations managing property at scale — where compliance is ongoing, complex, and critical to operations.”
+
+---
+
+Update industries list to:
+
+- Estate & Letting Agents  
+- Property & Block Management Companies  
+- Facilities Management Companies  
+- Commercial Property Operators  
+- Housing Associations & Portfolio Landlords  
+
+REMOVE:
+- “Private Landlords & Investors”
+
+---
+
+Add a small line below:
+
+“We also support large facilities management providers with outsourced compliance delivery across their portfolios.”
+
+---
+
+Keep layout unchanged, only update content.

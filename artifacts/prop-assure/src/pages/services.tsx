@@ -1,79 +1,155 @@
-import { Shield, Zap, Flame, Droplet, CheckSquare, Home as HomeIcon, AlertTriangle, Thermometer, ArrowRight, CheckCircle2, Clock, FileText } from "lucide-react";
+import { Shield, Zap, Flame, Droplet, CheckSquare, AlertTriangle, Bell, Lightbulb, Wind, ArrowRight, CheckCircle2, Clock, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
-const services = [
+const whyCards = [
   {
-    title: "EPC Certificates",
-    description: "Energy Performance Certificates are a legal requirement for all properties being let or sold in the UK. Our accredited assessors produce detailed, accurate EPCs with clear ratings and actionable improvement recommendations.",
-    detail: "Required by law for all lettings and sales. Valid for 10 years. Minimum E rating required for rental properties.",
-    frequency: "Every 10 years (or on change of tenant)",
-    legal: "Required under Energy Efficiency Regulations 2016",
-    icon: Thermometer,
+    icon: CheckCircle2,
+    title: "Fully Integrated Compliance",
+    desc: "We manage electrical, gas, fire, and environmental compliance through a single, coordinated approach — removing the need for multiple contractors.",
   },
   {
-    title: "Gas Safety (CP12)",
-    description: "Annual Landlord Gas Safety Records (CP12) are a legal obligation for all properties with gas appliances. Our Gas Safe registered engineers conduct thorough inspections of all gas appliances, pipework, and flues.",
-    detail: "All engineers are Gas Safe registered. Reports issued same-day. We coordinate directly with tenants for access.",
-    frequency: "Annual (mandatory)",
-    legal: "Required under Gas Safety Regulations 1998",
-    icon: Flame,
+    icon: Clock,
+    title: "Fast & Predictable Delivery",
+    desc: "We operate with structured scheduling and defined turnaround times, ensuring certificates and reports are delivered without delays.",
   },
   {
-    title: "Electrical Safety (EICR)",
-    description: "Electrical Installation Condition Reports assess the safety of the fixed electrical installation in your property. Our NICEIC-approved electricians provide comprehensive reports identifying any defects, damage, or non-compliance.",
-    detail: "Mandatory for rental properties. Remedial work coordinated upon request. Digital certificates issued within 24 hours.",
-    frequency: "Every 5 years (or on change of tenant)",
-    legal: "Required under Electrical Safety Standards Regulations 2020",
-    icon: Zap,
+    icon: FileText,
+    title: "Actionable Reporting",
+    desc: "Our reports are designed for real-world use — clear, structured, and aligned with regulatory requirements, with defined next steps where needed.",
   },
   {
-    title: "Legionella Risk Assessments",
-    description: "Landlords have a duty of care to assess and control the risk of Legionnaires' disease in their water systems. Our specialist assessors evaluate hot and cold water systems, tanks, and distribution networks.",
-    detail: "Full written risk assessment provided. Suitable control measures recommended. Compliant with HSE L8 guidance.",
-    frequency: "Every 2 years (or when system changes)",
-    legal: "Required under Control of Substances Hazardous to Health Regulations 2002",
-    icon: Droplet,
-  },
-  {
-    title: "Fire Risk Assessments",
-    description: "Legally required for all non-domestic premises and common areas of HMOs and residential blocks. Our qualified fire risk assessors conduct systematic evaluations of fire hazards, means of escape, and existing fire safety measures.",
-    detail: "Comprehensive written report. Prioritised action plan provided. Follow-up inspections available.",
-    frequency: "Annual review recommended",
-    legal: "Required under Regulatory Reform (Fire Safety) Order 2005",
     icon: Shield,
-  },
-  {
-    title: "HMO Licensing Support",
-    description: "Houses in Multiple Occupation face the most complex compliance requirements in the residential sector. We compile all required certificates, conduct room-by-room safety checks, and liaise with local authorities on your behalf.",
-    detail: "Licence application support. All required certificates bundled. Ongoing compliance management available.",
-    frequency: "Every 5 years (licence renewal)",
-    legal: "Required under Housing Act 2004",
-    icon: HomeIcon,
-  },
-  {
-    title: "PAT Testing",
-    description: "Where landlords supply electrical appliances — such as white goods, TVs, or washing machines — Portable Appliance Testing confirms those appliances are safe for tenant use and reduces your liability exposure.",
-    detail: "Visual inspection and electrical testing. Pass/fail labels applied. Digital records provided.",
-    frequency: "Annual or on change of tenant",
-    legal: "Best practice under Electrical Equipment (Safety) Regulations 2016",
-    icon: CheckSquare,
-  },
-  {
-    title: "Smoke & Carbon Monoxide Alarms",
-    description: "Since 2022, landlords must install carbon monoxide alarms in all rooms with a fixed combustion appliance. We supply, install, test, and certify both smoke and CO alarms to ensure full regulatory compliance.",
-    detail: "Supply and installation included. Battery and mains-wired options available. Written confirmation issued.",
-    frequency: "At start of tenancy and annual testing",
-    legal: "Required under Smoke and CO Alarm Regulations 2022",
-    icon: AlertTriangle,
+    title: "Certified & Accountable",
+    desc: "All services are delivered by fully accredited professionals, with accountability and compliance standards maintained across every project.",
   },
 ];
 
-const whyCards = [
-  { icon: CheckCircle2, title: "All Under One Roof", desc: "No need to coordinate multiple contractors. PropAssure manages your entire compliance calendar from a single point of contact." },
-  { icon: Clock, title: "Fast Turnarounds", desc: "Most certificates are issued within 24–48 hours of inspection. We know deadlines matter in property management." },
-  { icon: FileText, title: "Clear, Usable Reports", desc: "No dense technical jargon. Our reports are written in plain English and provide clear action points where remediation is required." },
-  { icon: Shield, title: "Fully Accredited", desc: "Every engineer and assessor we deploy is fully accredited with the relevant UK regulatory bodies — no exceptions." },
+const serviceGroups = [
+  {
+    category: "Electrical",
+    color: "text-secondary",
+    bgColor: "bg-secondary/5",
+    borderColor: "border-secondary/20",
+    services: [
+      {
+        title: "Electrical Installation Condition Report (EICR)",
+        description: "Comprehensive condition reports assessing the safety and compliance of fixed electrical installations. Mandatory for rental properties under the Electrical Safety Standards Regulations 2020.",
+        frequency: "Every 5 years, or on change of tenancy",
+        legal: "Electrical Safety Standards (England) Regulations 2020",
+        icon: Zap,
+      },
+      {
+        title: "PAT Testing",
+        description: "Portable Appliance Testing of landlord-supplied electrical equipment, confirming safety and reducing liability for landlords and property managers.",
+        frequency: "Annual or on change of tenancy",
+        legal: "Electrical Equipment (Safety) Regulations 2016",
+        icon: CheckSquare,
+      },
+      {
+        title: "Electrical Diagnostics",
+        description: "Targeted investigation of specific electrical faults or concerns. Useful following a failed EICR or where an intermittent issue requires expert assessment.",
+        frequency: "As required",
+        legal: "IET Wiring Regulations (BS 7671)",
+        icon: Zap,
+      },
+      {
+        title: "Fuse Box Installation",
+        description: "Upgrade or replacement of consumer units to ensure compliance with current wiring regulations, carried out by NICEIC-approved electricians.",
+        frequency: "As required",
+        legal: "IET Wiring Regulations (BS 7671)",
+        icon: Zap,
+      },
+    ],
+  },
+  {
+    category: "Gas",
+    color: "text-primary",
+    bgColor: "bg-primary/5",
+    borderColor: "border-primary/20",
+    services: [
+      {
+        title: "Gas Safety Certificate (CP12)",
+        description: "Annual Landlord Gas Safety Records issued by Gas Safe registered engineers. A legal requirement for all properties with gas appliances. Covers boilers, pipework, flues, and all gas appliances.",
+        frequency: "Annual (mandatory)",
+        legal: "Gas Safety (Installation and Use) Regulations 1998",
+        icon: Flame,
+      },
+    ],
+  },
+  {
+    category: "Fire & Safety",
+    color: "text-red-600",
+    bgColor: "bg-red-50",
+    borderColor: "border-red-100",
+    services: [
+      {
+        title: "Fire Risk Assessment (FRA)",
+        description: "Systematic evaluation of fire hazards, means of escape, detection and warning systems, and existing fire safety measures. Required for all non-domestic premises and common areas of residential blocks and HMOs.",
+        frequency: "Annual review recommended",
+        legal: "Regulatory Reform (Fire Safety) Order 2005",
+        icon: Shield,
+      },
+      {
+        title: "Fire Alarm Installation & Testing",
+        description: "Supply, installation, and periodic testing of fire detection and alarm systems. Ensures systems are maintained in full working order and compliant with BS 5839.",
+        frequency: "Annual testing minimum",
+        legal: "BS 5839-1:2017 / Fire Safety Order 2005",
+        icon: Bell,
+      },
+      {
+        title: "Emergency Lighting Testing",
+        description: "Periodic inspection and testing of emergency escape lighting systems in commercial premises and communal residential areas to confirm functionality in the event of mains failure.",
+        frequency: "Monthly checks, annual full duration test",
+        legal: "BS 5266-1:2016",
+        icon: Lightbulb,
+      },
+      {
+        title: "Fire Extinguisher Testing",
+        description: "Annual servicing and inspection of portable fire extinguishers to confirm they are in correct working order and meet current standards.",
+        frequency: "Annual",
+        legal: "BS 5306-3:2017",
+        icon: AlertTriangle,
+      },
+      {
+        title: "Fire Safety Certificate",
+        description: "Documentation confirming that a property or premises meets the required fire safety standards following assessment and any necessary remediation.",
+        frequency: "Following completed assessment",
+        legal: "Fire Safety Act 2021",
+        icon: FileText,
+      },
+    ],
+  },
+  {
+    category: "Environmental",
+    color: "text-teal-700",
+    bgColor: "bg-teal-50",
+    borderColor: "border-teal-100",
+    services: [
+      {
+        title: "Asbestos Survey",
+        description: "Management and refurbishment asbestos surveys carried out by qualified surveyors. Identifies the presence, location, and condition of asbestos-containing materials in line with HSE guidance.",
+        frequency: "Prior to refurbishment or as part of ongoing management",
+        legal: "Control of Asbestos Regulations 2012",
+        icon: Wind,
+      },
+    ],
+  },
+  {
+    category: "Energy",
+    color: "text-amber-700",
+    bgColor: "bg-amber-50",
+    borderColor: "border-amber-100",
+    services: [
+      {
+        title: "Energy Performance Certificate (EPC)",
+        description: "Energy Performance Certificates for residential and commercial properties. A legal requirement for all properties being let or sold. Produced by accredited assessors with clear energy ratings and improvement recommendations.",
+        frequency: "Every 10 years, or on change of tenancy/sale",
+        legal: "Energy Efficiency (Private Rented Property) Regulations 2015",
+        icon: Zap,
+      },
+    ],
+  },
 ];
 
 export default function Services() {
@@ -85,7 +161,7 @@ export default function Services() {
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Our Services</h1>
           <p className="text-xl text-muted-foreground">
-            Comprehensive property compliance solutions under one roof. We handle the complexity so you don't have to.
+            A comprehensive range of property compliance services, delivered by accredited professionals and managed through a single, coordinated approach.
           </p>
         </div>
       </section>
@@ -106,45 +182,49 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Grouped Services */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div key={index} className="p-8 border bg-white hover:border-primary/50 transition-colors group flex flex-col">
-                  <div className="flex items-start gap-4 mb-5">
-                    <div className="w-12 h-12 bg-slate-50 border flex items-center justify-center shrink-0 group-hover:bg-primary/5 transition-colors">
-                      <Icon className="w-6 h-6 text-primary" />
+        <div className="container mx-auto px-4 max-w-6xl space-y-20">
+          {serviceGroups.map((group) => (
+            <div key={group.category}>
+              <div className={`inline-flex items-center gap-2 px-4 py-1.5 border ${group.borderColor} ${group.bgColor} mb-8`}>
+                <span className={`text-xs font-bold uppercase tracking-widest ${group.color}`}>{group.category}</span>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                {group.services.map((service, index) => {
+                  const Icon = service.icon;
+                  return (
+                    <div key={index} className="p-8 border bg-white hover:border-primary/40 transition-colors group flex flex-col">
+                      <div className="flex items-start gap-4 mb-5">
+                        <div className="w-11 h-11 bg-slate-50 border flex items-center justify-center shrink-0 group-hover:bg-primary/5 transition-colors">
+                          <Icon className="w-5 h-5 text-primary" />
+                        </div>
+                        <h3 className="text-lg font-semibold leading-snug">{service.title}</h3>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+                        {service.description}
+                      </p>
+                      <div className="border-t pt-4 mt-auto space-y-2">
+                        <div className="flex gap-2 text-xs text-muted-foreground">
+                          <Clock className="w-3.5 h-3.5 mt-0.5 shrink-0 text-secondary" />
+                          <span><span className="font-medium text-foreground">Frequency:</span> {service.frequency}</span>
+                        </div>
+                        <div className="flex gap-2 text-xs text-muted-foreground">
+                          <FileText className="w-3.5 h-3.5 mt-0.5 shrink-0 text-secondary" />
+                          <span><span className="font-medium text-foreground">Legislation:</span> {service.legal}</span>
+                        </div>
+                      </div>
+                      <div className="mt-5">
+                        <Link href="/contact" className="text-sm font-medium text-secondary hover:text-secondary/80 inline-flex items-center gap-1">
+                          Request a quote <ArrowRight className="w-3.5 h-3.5" />
+                        </Link>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold">{service.title}</h3>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-                    {service.description}
-                  </p>
-                  <p className="text-sm text-foreground mb-5">{service.detail}</p>
-                  <div className="border-t pt-4 mt-auto space-y-2">
-                    <div className="flex gap-2 text-xs text-muted-foreground">
-                      <Clock className="w-3.5 h-3.5 mt-0.5 shrink-0 text-secondary" />
-                      <span><span className="font-medium text-foreground">Frequency:</span> {service.frequency}</span>
-                    </div>
-                    <div className="flex gap-2 text-xs text-muted-foreground">
-                      <FileText className="w-3.5 h-3.5 mt-0.5 shrink-0 text-secondary" />
-                      <span><span className="font-medium text-foreground">Legislation:</span> {service.legal}</span>
-                    </div>
-                  </div>
-                  <div className="mt-5">
-                    <Link href="/contact" className="text-sm font-medium text-secondary hover:text-secondary/80 inline-flex items-center gap-1">
-                      Request a quote <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -155,7 +235,7 @@ export default function Services() {
             <div>
               <h2 className="text-3xl font-bold mb-4">Never miss a renewal deadline</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                PropAssure maintains a live compliance calendar for every property we manage. We send automated reminders at 90, 30, and 7 days before expiry — and we can coordinate access directly with your tenants, so you don't have to.
+                PropAssure maintains a live compliance calendar for every property we manage. We send automated reminders before expiry and can coordinate access directly with your tenants — removing the administrative burden entirely.
               </p>
               <ul className="space-y-3 text-sm">
                 {[
@@ -172,12 +252,12 @@ export default function Services() {
               </ul>
             </div>
             <div className="bg-white p-8 border">
-              <h3 className="text-xl font-bold mb-2">Need multiple services?</h3>
+              <h3 className="text-xl font-bold mb-2">Managing multiple properties?</h3>
               <p className="text-muted-foreground text-sm mb-6">
-                Ask about our bundled compliance packages for landlords and property managers. We consolidate all renewals to a single visit where possible, saving you time and money.
+                We offer portfolio compliance packages for property managers and estate agents, consolidating renewals wherever possible and providing a single point of contact for all service disciplines.
               </p>
               <Button size="lg" asChild className="rounded-none w-full h-12">
-                <Link href="/contact">Build a Custom Package</Link>
+                <Link href="/contact">Discuss Your Requirements</Link>
               </Button>
             </div>
           </div>
@@ -189,10 +269,10 @@ export default function Services() {
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="text-3xl font-bold mb-6">Ready to get fully compliant?</h2>
           <p className="text-lg text-primary-foreground/90 mb-8">
-            Contact our team today for a transparent, no-obligation quote across any of our services.
+            Contact our team for a no-obligation discussion about your property's compliance requirements.
           </p>
           <Button size="lg" variant="secondary" asChild className="rounded-none bg-white text-primary hover:bg-white/90">
-            <Link href="/contact">Get a Quote Today</Link>
+            <Link href="/contact">Get in Touch Today</Link>
           </Button>
         </div>
       </section>

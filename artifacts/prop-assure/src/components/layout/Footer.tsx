@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logoSrc from "@assets/PropAssure_1776429963639.png";
+import logoSrc from "@assets/PropAssure_transparent_1776686496923.png";
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-6">
-              <img src={logoSrc} alt="PropAssure" className="h-14 w-auto" />
+              <img src={logoSrc} alt="PropAssure" className="h-16 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
               Making Property Compliance Feel Simple. The trusted compliance partner for UK property professionals.
@@ -23,10 +23,10 @@ export function Footer() {
             <h3 className="font-semibold mb-6">Services</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li><Link href="/services" className="hover:text-primary transition-colors">EPC Certificates</Link></li>
-              <li><Link href="/services" className="hover:text-primary transition-colors">Gas Safety (CP12)</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors">Gas Safety</Link></li>
               <li><Link href="/services" className="hover:text-primary transition-colors">Electrical Safety (EICR)</Link></li>
-              <li><Link href="/services" className="hover:text-primary transition-colors">Legionella Risk Assessment</Link></li>
               <li><Link href="/services" className="hover:text-primary transition-colors">Fire Risk Assessments</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors">Asbestos Surveys</Link></li>
               <li><Link href="/services" className="hover:text-primary transition-colors">PAT Testing</Link></li>
             </ul>
           </div>
