@@ -1,8 +1,4 @@
 {
-  "buildCommand": "pnpm run build",
-  "outputDirectory": "artifacts/prop-assure/dist/public",
-  "env": {
-    "PORT": "3000",
-    "BASE_PATH": "/"
-  }
+  "framework": "nextjs",
+  "buildCommand": "pnpm --filter @workspace/prop-assure build"
 }

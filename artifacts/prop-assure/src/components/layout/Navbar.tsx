@@ -1,11 +1,14 @@
+"use client";
+
 import React from "react";
-import { Link, useLocation } from "wouter";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoSrc from "@assets/PropAssure_20260417_190455_0000_(1)_1776687061489.png";
 
 export function Navbar() {
-  const [location] = useLocation();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = React.useState(false);
 
   const links = [
@@ -21,7 +24,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <img src={logoSrc} alt="PropAssure" className="h-16 w-auto" style={{ mixBlendMode: "multiply" }} />
+          <img src={logoSrc.src} alt="PropAssure" className="h-16 w-auto" style={{ mixBlendMode: "multiply" }} />
         </Link>
 
         {/* Desktop Nav */}
@@ -31,7 +34,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location === link.href ? "text-primary" : "text-muted-foreground"
+                pathname === link.href ? "text-primary" : "text-muted-foreground"
               }`}
             >
               {link.label}
@@ -44,6 +47,7 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <button
+          type="button"
           className="md:hidden p-2 -mr-2"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -61,7 +65,7 @@ export function Navbar() {
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className={`text-sm font-medium ${
-                  location === link.href ? "text-primary" : "text-muted-foreground"
+                  pathname === link.href ? "text-primary" : "text-muted-foreground"
                 }`}
               >
                 {link.label}

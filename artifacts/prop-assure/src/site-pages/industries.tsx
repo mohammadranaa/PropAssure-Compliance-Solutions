@@ -1,6 +1,6 @@
 import { Building2, Key, Building, Briefcase, Factory, CheckCircle2, ArrowRight, Shield, FileText, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import Link from "next/link";
 
 const industries = [
   {

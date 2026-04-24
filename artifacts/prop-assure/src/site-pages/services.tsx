@@ -1,6 +1,6 @@
 import { Shield, Zap, Flame, Droplet, CheckSquare, AlertTriangle, Bell, Lightbulb, Wind, ArrowRight, CheckCircle2, Clock, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import Link from "next/link";
 
 const whyCards = [
   {
