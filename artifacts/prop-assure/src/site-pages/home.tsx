@@ -181,7 +181,7 @@ export default function Home() {
                 <img
                   src={logoSrc.src}
                   alt="PropAssure"
-                  className="h-20 w-auto md:h-24 lg:h-28"
+                  className="h-32 w-auto md:h-40 lg:h-52"
                   style={{ mixBlendMode: "multiply" }}
                 />
               </div>
