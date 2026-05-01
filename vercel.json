@@ -1,4 +1,6 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "buildCommand": "pnpm --filter @workspace/prop-assure build"
+  "buildCommand": "pnpm --filter @workspace/prop-assure build",
+  "outputDirectory": "artifacts/prop-assure/.next"
 }
