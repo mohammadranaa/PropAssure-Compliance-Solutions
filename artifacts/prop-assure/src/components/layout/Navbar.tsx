@@ -45,7 +45,7 @@ export function Navbar() {
             <img
               src={logoSrc.src}
               alt="PropAssure"
-              className="h-20 w-auto"
+              className="h-32 w-auto"
               style={{ mixBlendMode: "multiply" }}
             />
           </Link>
