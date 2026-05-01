@@ -1,6 +1,6 @@
 import { Shield, Award, Users2, CheckCircle2, Building2, Target, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import Link from "next/link";
 
 const accreditations = [
   { name: "Gas Safe Registered", number: "Reg. No. 567891", desc: "All gas inspections conducted by Gas Safe registered engineers" },
@@ -32,8 +32,6 @@ const deliveryPrinciples = [
 export default function About() {
   return (
     <div className="flex flex-col min-h-screen">
-
-      {/* Header */}
       <section className="bg-slate-50 py-20 border-b">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">About PropAssure</h1>
@@ -43,7 +41,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Section 1: Who We Are */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -87,7 +84,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Section 2: What We Do */}
       <section className="py-24 bg-slate-50 border-y">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -138,7 +134,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Section 3: How We Work */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -165,7 +160,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Section 4: Our Approach */}
       <section className="py-24 bg-slate-50 border-y">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -206,7 +200,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Accreditations */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
@@ -218,31 +211,19 @@ export default function About() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {accreditations.map((acc) => (
               <div key={acc.name} className="bg-slate-50 border p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                  <h3 className="font-semibold">{acc.name}</h3>
-                </div>
-                <p className="text-xs text-muted-foreground mb-1">{acc.number}</p>
-                <p className="text-sm text-muted-foreground">{acc.desc}</p>
+                <p className="font-semibold mb-1">{acc.name}</p>
+                <p className="text-xs text-primary font-medium mb-3">{acc.number}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{acc.desc}</p>
               </div>
             ))}
           </div>
+          <div className="text-center mt-12">
+            <Button size="lg" asChild className="rounded-none h-12 px-8">
+              <Link href="/contact">Speak to Our Team</Link>
+            </Button>
+          </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h2 className="text-3xl font-bold mb-4">Work with a partner you can rely on</h2>
-          <p className="text-primary-foreground/90 mb-8 text-lg">
-            Get in touch to discuss your compliance requirements. We'll give you a clear picture of what's involved and how we can help.
-          </p>
-          <Button size="lg" asChild className="rounded-none bg-white text-primary hover:bg-white/90 h-14 px-8">
-            <Link href="/contact">Start a Conversation</Link>
-          </Button>
-        </div>
-      </section>
-
     </div>
   );
 }
